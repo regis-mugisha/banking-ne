@@ -21,8 +21,8 @@ public class Customer {
     private Long id;
 
     private String firstName;
-    private String email;
     private String lastName;
+    private String email;
     private String mobile;
     private LocalDate dob;
     private String account;
