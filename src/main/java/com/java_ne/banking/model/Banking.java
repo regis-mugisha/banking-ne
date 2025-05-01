@@ -15,11 +15,6 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 public class Banking {
-    public enum TransactionType{
-        SAVING,
-        WITHDRAW,
-        TRANSFER
-    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,9 +22,14 @@ public class Banking {
 
     @ManyToOne
     private Customer customer;
+
     private String account;
     private Double amount;
+
+
+    @Enumerated(EnumType.STRING)
     private TransactionType type;
+
     private LocalDateTime bankingDateTime;
 
 }
