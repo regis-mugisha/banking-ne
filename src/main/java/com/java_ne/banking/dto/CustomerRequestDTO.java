@@ -1,12 +1,11 @@
 package com.java_ne.banking.dto;
 
 import lombok.Data;
-
 import java.time.LocalDate;
 
 
 @Data
-public class CustomerRequest {
+public class CustomerRequestDTO {
 
     private String firstName;
     private String lastName;
