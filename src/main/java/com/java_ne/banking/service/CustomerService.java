@@ -1,9 +1,8 @@
 package com.java_ne.banking.service;
 
-import com.java_ne.banking.dto.CustomerRequest;
+import com.java_ne.banking.dto.CustomerRequestDTO;
 import com.java_ne.banking.model.Customer;
 import com.java_ne.banking.repository.CustomerRepository;
-import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +14,7 @@ import java.util.UUID;
 public class CustomerService {
     private final CustomerRepository customerRepository;
 
-    public Customer createCustomer(CustomerRequest request) {
+    public Customer createCustomer(CustomerRequestDTO request) {
         Customer customer = Customer.builder()
                 .firstName(request.getFirstName())
                 .lastName(request.getLastName())
